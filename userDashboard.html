@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Gallery | Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="userDashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark dashboard-nav px-4 position-relative">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand fw-bold position-absolute start-0 ms-4" href="#">E-Gallery</a>
+
+            <div class="navbar-nav bg-navy-pill p-1">
+                <a class="nav-link active px-4" href="#" onclick="showSection('home', this)">Home</a>
+                <a class="nav-link px-4" href="#" onclick="showSection('latin-honor', this)">Latin Honor</a>
+                <a class="nav-link px-4" href="#" onclick="showSection('departments', this)">Department</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="heroCarousel" class="carousel slide hero-section" data-bs-ride="carousel">
+        <div class="carousel-indicators mb-4">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active dot"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" class="dot"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" class="dot"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" class="dot"></button>
+        </div>
+
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
+                    <h1 class="display-3 serif-font text-uppercase">Welcome to USTP</h1>
+                    <h5 class="fw-bold mt-2">E-Gallery</h5>
+                    <p class="fst-italic opacity-75 mt-3">The USTP E-Gallery is the digital version of the physical
+                        yearbook.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item h-100">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
+                    <h1 class="display-3 serif-font text-uppercase">Congratulations</h1>
+                    <h5 class="fw-bold mt-2">Class of 2029</h5>
+                    <p class="fst-italic opacity-75 mt-3">"The future belongs to those who believe in the beauty of
+                        their dreams."</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="btn-side-arrow"><i class="bi bi-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="btn-side-arrow"><i class="bi bi-chevron-right"></i></span>
+        </button>
+    </header>
+
+    <main class="container py-5">
+
+        <!----Home----->
+        <section id="home">
+            <h5 class="fw-bold mb-4">Recently</h5>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="yearbook-card">
+                        <img src="/src/img/student/TABANIAG, J-VHONNE L IMG_4870.jpeg" alt="Valedictory Address">
+                        <div class="card-overlay">
+                            <h6>VALEDICTORY ADDRESS</h6>
+                            <p>As we enter the next chapter, preparing for board exams or seeking jobs – and if the path
+                                <br>
+                                ahead seems impossible, don't forget that you've already conquered so much and endured
+                                even more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="yearbook-card">
+                        <img src="/src/img/student/FLORES, Zyra Nadine A..jpeg" alt="Valedictory Address">
+                        <div class="card-overlay">
+                            <h6>VALEDICTORY ADDRESS</h6>
+                            <p>The version of you that the world needs already within you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="yearbook-card">
+                        <img src="/src/img/student/Fugnit, Remiel Charles.jpg" alt="Valedictory Address">
+                        <div class="card-overlay">
+                            <h6>VALEDICTORY ADDRESS</h6>
+                            <p>Together, we have grown and now we help others grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="featuredCarousel" class="carousel slide quote-container mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="yearbook-card rounded-0" style="height: 400px;">
+                                    <img src="/src/img/student/TUBA, SHANE ABBY.png" alt="Featured student">
+                                    <div class="card-overlay">
+                                        <h6 class="text-uppercase m-0">Valedictory Address</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 bg-light-gray p-5">
+                                <p class="fs-5 italic mb-4">"We did not survive – we created our own way forward. We
+                                    turned every
+                                    hardship into a stepping stone. And wherever we go next, may continue
+                                    making paths for ourselves and for those who will come after us."</p>
+                                <div class="mt-2">
+                                    <div class="fw-bold fs-5">Ms. Shane Abby Tuba</div>
+                                    <div class="text-secondary small">Class of 2029</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="yearbook-card rounded-0" style="height: 400px;">
+                                    <img src="/src/img/student/Caboverde, Chanice.JPG" alt="Featured student">
+                                    <div class="card-overlay">
+                                        <h6 class="text-uppercase m-0">Valedictory Address</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 bg-light-gray p-5">
+                                <p class="fs-5 italic mb-4">"The journey was never easy, but the view from the top makes
+                                    every struggle worth it. To the Class of 2029, we made it."</p>
+                                <div class="mt-2">
+                                    <div class="fw-bold fs-5">Ms. Chanice Caboverde</div>
+                                    <div class="text-secondary small">Class of 2029</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="yearbook-card rounded-0" style="height: 400px;">
+                                    <img src="/src/img/student/Justiniani, Jonathan.jpg" alt="Featured student">
+                                    <div class="card-overlay">
+                                        <h6 class="text-uppercase m-0">Valedictory Address</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 bg-light-gray p-5">
+                                <p class="fs-5 italic mb-4">"Education is the most powerful weapon which you can use to
+                                    change the world. Let's go change it together."</p>
+                                <div class="mt-2">
+                                    <div class="fw-bold fs-5">Mr. Jonathan Justiniani</div>
+                                    <div class="text-secondary small">Class of 2029</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-controls-container">
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-navy-small rounded-circle p-0" type="button"
+                            data-bs-target="#featuredCarousel" data-bs-slide="prev" style="width:35px; height:35px;">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <div class="carousel-indicators-custom d-flex gap-1">
+                            <div class="dot-sm active" data-bs-target="#featuredCarousel" data-bs-slide-to="0"></div>
+                            <div class="dot-sm" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></div>
+                            <div class="dot-sm" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></div>
+                        </div>
+
+                        <button class="btn btn-navy-small rounded-circle p-0" type="button"
+                            data-bs-target="#featuredCarousel" data-bs-slide="next" style="width:35px; height:35px;">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!----Latin Honor----->
+        <section id="latin-honor" style="display:none;">
+            <div class="row mb-4 align-items-center">
+                <div class="col-md-6"></div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="input-group search-box w-50">
+                        <input type="text" id="search-latin" class="form-control rounded-pill"
+                            placeholder="Search Latin Honors...">
+                        <span class="position-absolute end-0 top-50 translate-middle-y me-3">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="fw-bold mb-4">Class of 2029</p>
+
+            <div id="latin-grid" class="row g-3">
+                <div class="col-6 col-md-2-4 mb-4">
+                    <div class="honor-profile text-center">
+                        <img src="/src/img/student/Durain.jpg" class="mb-2" alt="Student">
+                        <div class="px-1">
+                            <small class="fw-bold text-uppercase d-block">Durain, Jussy Jay D.</small>
+                            <small class="text-muted d-block" style="font-size: 0.6rem;">MAGNA CUM LAUDE</small>
+                            <small class="fw-bold">BSIT</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2-4 mb-4">
+                    <div class="honor-profile text-center">
+                        <img src="/src/img/student/Molo.jpg" class="mb-2" alt="Student">
+                        <div class="px-1">
+                            <small class="fw-bold text-uppercase d-block">Molo, Kairos</small>
+                            <small class="text-muted d-block" style="font-size: 0.6rem;">SUMMA CUM LAUDE</small>
+                            <small class="fw-bold">BSIT</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="no-results" class="text-center py-5" style="display: none;">
+                <i class="bi bi-person-x" style="font-size: 3rem; color: #ccc;"></i>
+                <p class="mt-3 text-muted">No students found matching that name.</p>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination custom-pagination">
+                        <li class="page-item">
+                            <a class="page-link prev-next" href="#">
+                                <i class="bi bi-chevron-left"></i> </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link prev-next" href="#">
+                                <i class="bi bi-chevron-right"></i> </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!----Departments----->
+        <section id="departments" style="display:none;">
+            <div class="row mb-5">
+                <div class="col-12 text-center position-relative">
+                    <h5 class="fw-bold">DEPARTMENTS</h5>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="dept-card navy" data-bs-toggle="modal" data-bs-target="#engineeringModal"
+                        style="cursor: pointer;">
+                        ENGINEERING
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card gold" data-bs-toggle="modal" data-bs-target="#csisModal"
+                        style="cursor: pointer;">
+                        COMPUTER SCIENCE AND INFORMATION SYSTEMS
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card navy" data-bs-toggle="modal" data-bs-target="#techModal"
+                        style="cursor: pointer;">
+                        TECHNOLOGY
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card gold" data-bs-toggle="modal" data-bs-target="#lifeSciencesModal"
+                        style="cursor: pointer;">
+                        LIFE SCIENCES
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card navy" data-bs-toggle="modal" data-bs-target="#naturalSciencesModal"
+                        style="cursor: pointer;">
+                        NATURAL SCIENCES
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card gold" data-bs-toggle="modal" data-bs-target="#socialSciencesModal"
+                        style="cursor: pointer;">
+                        SOCIAL SCIENCES
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dept-card navy" data-bs-toggle="modal" data-bs-target="#artHumanitiesModal"
+                        style="cursor: pointer;">
+                        ART AND HUMANITIES
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="section-view" style="display:none; padding: 20px;">
+            <div class="row mb-5">
+                <div class="col-12 d-flex align-items-center">
+                    <button class="btn-back me-3" onclick="goBackToDepartments()">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+
+                    <h5 id="section-view-title" class="fw-bold m-0 text-uppercase"
+                        style="letter-spacing: 2px; color: var(--navy-dark); border-left: 2px solid #dee2e6; padding-left: 15px;">
+                        AVAILABLE SECTIONS
+                    </h5>
+                </div>
+            </div>
+
+            <div id="section-grid" class="row g-4 justify-content-center"></div>
+        </section>
+
+        <section id="student-grid-view" style="display:none; padding: 20px;">
+            <div class="row mb-4">
+                <div class="col-12 d-flex align-items-center">
+                    <button class="btn-back me-3" onclick="goBackToSections()">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+
+                    <h5 id="current-section-title" class="fw-bold m-0 text-uppercase"
+                        style="letter-spacing: 2px; color: var(--navy-dark);">
+                        SECTION NAME
+                    </h5>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h6 class="fw-bold text-muted" style="font-size: 0.9rem;">Class of 2029</h6>
+            </div>
+
+            <div id="student-container" class="row g-3"></div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination custom-pagination">
+                        <li class="page-item">
+                            <a class="page-link prev-next" href="#">
+                                <i class="bi bi-chevron-left"></i> </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link prev-next" href="#">
+                                <i class="bi bi-chevron-right"></i> </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <!----Footer----->
+    <footer class="user-footer py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4 class="fw-bold text-white mb-3">E-Gallery</h4>
+                    <p class="footer-text mb-4">The USTP E-Gallery is the digital version of the physical yearbook.</p>
+
+                    <div class="d-flex flex-column align-items-start">
+                        <a href="#" class="linkedin-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <span class="linkedin-label">LinkedIn</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h4 class="fw-bold text-white mb-3">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:durain.jussyjay@gmail.com" class="footer-link">durain.jussyjay@gmail.com</a>
+                        </li>
+                        <li><a href="mailto:molo.kairos@gmail.com" class="footer-link">molo.kairos@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="userDashboard.js"></script>
+
+    <!-- Engineering Programs -->
+    <div class="modal fade" id="engineeringModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Civil Engineering')">Civil
+                                Engineering</div>
+                            <div class="program-btn gold" onclick="renderSections('BS Electrical Engineering')">
+                                Electrical Engineering</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Computer Engineering')">Computer
+                                Engineering</div>
+                            <div class="program-btn gold" onclick="renderSections('BS Mechanical Engineering')">
+                                Mechanical Engineering</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Geodetic Engineering')">Geodetic
+                                Engineering</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Electronic Engineering')">
+                                Electronics Engineering</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Environment Engineering')">
+                                Environment Engineering</div>
+                            <div class="program-btn gold"
+                                onclick="renderSections('BS Agricultural and Biosystems Engineering')">Agricultural and
+                                Biosystem Engineering</div>
+                            <div class="program-btn navy"
+                                onclick="renderSections('BS Naval Architecture and Marine Engineering')">Naval
+                                Architecture and Marine Engineering</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSIS Programs -->
+    <div class="modal fade" id="csisModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Computer Science')">Computer
+                                Science</div>
+                            <div class="program-btn gold"
+                                onclick="renderSections('BS Technology Communication Management')">Technology
+                                Communication Management</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Data Science')">Data Science</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Information Technology')">
+                                Information Technology</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Programs -->
+    <div class="modal fade" id="techModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Agricultural Technology')">
+                                Agricultural Technology</div>
+                            <div class="program-btn gold" onclick="renderSections('BS Electro-Mechanical')">
+                                Electro-Mechanical</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Energy System and Management')">
+                                Energy System and Management</div>
+                            <div class="program-btn gold"
+                                onclick="renderSections('BS Manufacturing Engineering Technology')">Manufacturing
+                                Engineering Technology</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Autotronics')">Autotronics</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Electronics Technology')">
+                                Electronics Technology</div>
+                            <div class="program-btn gold" onclick="renderSections('BS Food Processing and Management')">
+                                Food Processing and Management</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Energy System and Management')">
+                                Energy System and Management</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Life Sciences Programs -->
+    <div class="modal fade" id="lifeSciencesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" style="font-size: 0.75rem; line-height: 1.2;"
+                                onclick="renderSections('BS Agricultural')">
+                                Agricultural (major in Animal Science, Crop Science, Entrepreneurship, Dairy Science and
+                                Agricultural Education)
+                            </div>
+                            <div class="program-btn gold" onclick="renderSections('BS Horticulture and Management')">
+                                Horticulture and Management</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Agroforestry')">Agroforestry</div>
+                            <div class="program-btn navy" onclick="renderSections('BS Marine Biology')">Marine Biology
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Natural Science Programs -->
+    <div class="modal fade" id="naturalSciencesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Applied Mathematics')">Applied
+                                Mathematics</div>
+                            <div class="program-btn gold" onclick="renderSections('BS Chemistry')">Chemistry</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Applied Physics')">Applied Physics
+                            </div>
+                            <div class="program-btn navy" onclick="renderSections('BS Environmental Science')">
+                                Environmental Science</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Sciences Programs -->
+    <div class="modal fade" id="socialSciencesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy"
+                                onclick="renderSections('BS Secondary Education (major in Mathematics)')">Secondary
+                                Education (major in Mathematics)</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn gold"
+                                onclick="renderSections('BS Secondary Education (major in Science)')">Secondary
+                                Education (major in Science)</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="program-btn gold" onclick="renderSections('BS Social Work')">Social Work</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Technical-Vocational Teacher')">
+                                Technical-Vocational Teacher</div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="program-btn navy text-center"
+                                onclick="renderSections('BS Technology and Livelihood Education (major in Industrial Arts, Home Economics)')">
+                                Technology and Livelihood Education (major in Industrial Arts, Home Economics)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Art and Humanities Programs -->
+    <div class="modal fade" id="artHumanitiesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-4 border-0" style="border-radius: 20px;">
+                <div class="modal-body">
+                    <h5 class="text-center fw-bold mb-5" style="letter-spacing: 2px;">PROGRAMS</h5>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="program-btn navy" onclick="renderSections('BS Architecture')">Architecture</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-navy px-4" data-bs-dismiss="modal"
+                            style="background-color: #1A1851; color: white; border-radius: 8px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

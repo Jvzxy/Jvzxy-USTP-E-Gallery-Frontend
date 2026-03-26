@@ -1,0 +1,547 @@
+/* Color Palette */
+:root {
+    --navy-dark: #1A1851;
+    --navy-light: #252266;
+    --text-gray: #a0a0c0;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+ :root {
+            --navy-dark: #1A1851;
+            --navy-light: #252266;
+            --text-gray: #a0a0c0;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .user-footer {
+            background-color: var(--navy-dark);
+            color: white;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-text {
+            color: #a0a0c0;
+            font-size: 0.9rem;
+            max-width: 320px;
+            line-height: 1.6;
+        }
+
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-link:hover {
+            color: #a0a0c0;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        /* LinkedIn Icon Styling */
+        .linkedin-icon {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+        }
+
+        .linkedin-label {
+            color: #a0a0c0;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .linkedin-icon:hover {
+            color: #0a66c2;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+/* Nav Styling */
+.dashboard-nav {
+    background-color: var(--navy-dark);
+    height: 70px; 
+    display: flex;
+    align-items: center;
+}
+
+
+.bg-navy-pill {
+    background-color: var(--navy-light);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+}
+
+.bg-navy-pill .nav-link {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.bg-navy-pill .nav-link.active {
+    background-color: white;
+    color: var(--navy-dark) !important;
+}
+
+/* Hero Section Base */
+.hero-section {
+    background-color: var(--navy-dark);
+    height: 450px;
+    overflow: hidden;
+}
+
+.serif-font {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px; 
+    font-weight: 700;
+}
+
+/* Side Arrows Styling */
+.btn-side-arrow {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.btn-side-arrow i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.carousel-control-prev:hover .btn-side-arrow,
+.carousel-control-next:hover .btn-side-arrow {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Indicator Dots styling */
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+
+
+/* Yearbook Cards */
+.yearbook-card {
+    position: relative;
+    border-radius: 15px; /* Matches your Figma better than 20px */
+    overflow: hidden;
+    height: 320px; /* Increased height to match Figma proportions */
+    background-color: #eee; /* Fallback color */
+}
+
+.yearbook-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This prevents the stretching! */
+    object-position: top center; /* Keeps the student's face in view */
+    display: block;
+}
+
+/* Updated Overlay for "Recently" section */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Darker gradient for better text readability */
+    background: linear-gradient(to top, rgba(26, 24, 81, 0.95) 0%, rgba(26, 24, 81, 0.7) 50%, transparent 100%);
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.card-overlay h6 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-overlay p {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+
+/* Featured Quote */
+.quote-container {
+    background-color: #ffffff; /* White background for the whole unit */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Make sure background stays consistent during slides */
+.bg-light-gray {
+    background-color: #F8F9FA;
+    min-height: 400px; 
+}
+
+.italic {
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+}
+
+.btn-navy-small {
+    background: var(--navy-dark);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.dot-sm {
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.dot-sm.active {
+    background: var(--navy-dark);
+}
+
+/* Position the controls over the quote area */
+.carousel-controls-container {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    left: 48%; 
+    z-index: 5;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-indicators-custom .active {
+    background: var(--navy-dark);
+}
+
+/* Removes the default Bootstrap hover effect on carousel buttons */
+.btn-navy-small:hover, 
+.btn-navy-small:focus, 
+.btn-navy-small:active {
+    background-color: var(--navy-dark) !important; 
+    color: white !important;
+    transform: none !important; 
+    box-shadow: none !important; 
+    outline: none !important;
+}
+
+
+
+
+
+/* Custom 5-column grid for the Honor Gallery */
+@media (min-width: 768px) {
+    .col-md-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+/* Department Tiles */
+.dept-card {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-size: 0.9rem;
+}
+
+.dept-card.navy { background-color: var(--navy-dark); }
+.dept-card.gold { background-color: #FFB800; } 
+
+.dept-card:hover {
+    transform: scale(1.03);
+}
+
+
+.search-box .form-control {
+    background-color: #E8E8E8 !important;
+    border: none;
+    font-size: 0.8rem;
+    padding-right: 35px; 
+}
+
+
+#student-container {
+    transition: all 0.3s ease;
+    min-height: 400px; 
+}
+
+#no-results p {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+
+
+/* Styling for buttons inside the Programs popup */
+.program-btn {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.program-btn.navy { background-color: #1A1851; }
+.program-btn.gold { background-color: #FFB11B; }
+
+.program-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+
+
+/* Premium Back Button Styling */
+.btn-back {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    color: var(--navy-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn-back i {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.btn-back:hover {
+    background-color: var(--navy-dark);
+    color: white;
+    border-color: var(--navy-dark);
+    transform: translateX(-3px); /* Subtle "push" animation */
+}
+
+/* Cleaner Section Title */
+#current-section-title {
+    font-size: 1.1rem;
+    border-left: 2px solid #dee2e6; /* Adds a nice separator line */
+    padding-left: 15px;
+}
+
+
+
+/* Modal Content shadow */
+.modal-content {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-backdrop.show {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.section-card {
+    height: 160px;
+    border-radius: 12px;
+    background: url('/src/img/Logo/Graduation_Section.webp') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-blur-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(12px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+
+
+/* Custom 5-column grid for student profiles */
+@media (min-width: 768px) {
+    .col-md-2-4 {
+        flex: 0 0 auto;
+        width: 20%; 
+    }
+}
+
+
+
+.honor-profile img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top center; 
+    border-radius: 8px;
+    transition: 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+
+.honor-profile small {
+    font-size: 0.65rem;
+    line-height: 1.4;
+    color: #000;
+    display: block; /* Ensures spacing works correctly */
+    margin-top: 8px;
+}
+
+.bg-navy {
+    background-color: #1A1851 !important;
+}
+
+
+
+
+/* Pagination Styling to match your navy theme */
+.pagination .page-link {
+    border: 1px solid #dee2e6;
+    margin: 0 2px;
+    border-radius: 4px !important;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #fff;
+    border-color: #dee2e6;
+    color: #000;
+}
+
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Balanced Pagination Styling */
+.custom-pagination .page-item {
+    margin: 0 4px; /* Space between boxes */
+}
+
+.custom-pagination .page-link {
+    width: 35px;   
+    height: 35px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px !important; 
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-dark);
+    border: 1px solid #dee2e6;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+/* Active State (The current page) */
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--navy-dark) !important;
+    border-color: var(--navy-dark) !important;
+    color: white !important;
+}
+
+/* Modern Arrow Buttons */
+.custom-pagination .prev-next {
+    background-color: #f8f9fa !important; /* Light background for arrows */
+    color: var(--navy-dark) !important;
+    border: 1px solid #dee2e6 !important;
+    font-size: 0.9rem; /* Smaller, cleaner icon size */
+}
+
+.custom-pagination .prev-next:hover {
+    background-color: var(--navy-dark) !important;
+    color: white !important;
+    border-color: var(--navy-dark) !important;
+}
+
+/* Ensure icons are centered perfectly */
+.custom-pagination .page-link i {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}

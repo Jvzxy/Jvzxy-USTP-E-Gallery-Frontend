@@ -1,0 +1,145 @@
+/* General Layout */
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #1A1851;
+    color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+.sidebar-logo {
+    padding: 30px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #a0a0c0;
+    padding: 12px 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Content Area */
+.content-area {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+/* Buttons */
+.btn-navy {
+    background-color: #1A1851 !important;
+    color: white !important;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-navy:hover {
+    opacity: 0.9;
+}
+
+.btn-delete-small {
+    background-color: #FF4D4D; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-delete-small:hover {
+    background-color: #e60000;
+}
+
+/* Tab Toggle Styling */
+.active-toggle {
+    background-color: #1A1851 !important;
+    color: white !important;
+}
+
+/* User Tab: Item Boxes */
+.dark-item-box {
+    background-color: #1A1851;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.item-circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.item-circle i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Photo Tab: Upload Box Design */
+.upload-box {
+    border: 2px solid #1A1851;
+    border-radius: 15px;
+    background: #fff;
+    min-height: 450px; 
+}
+
+/* Restored Figma Design: Light Blue Circle for Upload Icon */
+.upload-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #eef2ff; /* Light blue from Figma */
+    color: #1A1851; /* Navy icon color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.upload-icon-circle i {
+    font-size: 2rem;
+}
+
+/* Centered Layout for Photo Upload Area */
+.upload-box-photo {
+    border: 2px solid #1A1851;
+    border-radius: 15px;
+    background: #fff;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column; /* Fixed typo from flex-column */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.upload-box-photo p {
+    color: #a0a0c0;
+    font-size: 0.85rem;
+}

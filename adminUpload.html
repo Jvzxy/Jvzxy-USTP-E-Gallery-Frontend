@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Upload - E-Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/src/css/admin/AdminUpload.css">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <nav class="sidebar d-flex flex-column justify-content-between">
+            <div>
+                <div class="sidebar-logo">E-Gallery</div>
+                <small class="text-secondary px-4 mt-4 d-block fw-bold" style="font-size: 10px;">Main menu</small>
+                <ul class="nav flex-column mt-2">
+                    <li class="nav-item"><a href="adminDashboard.html" class="nav-link"><i class="bi bi-grid-fill me-2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active"><i class="bi bi-box-arrow-up me-2"></i> Uploads</a></li>
+                </ul>
+            </div>
+            <ul class="nav flex-column mb-4">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-gear me-2"></i> Settings</a></li>
+                <li class="nav-item"><a href="\src\adminLogin.html" class="nav-link"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area p-5">
+            <div class="d-flex gap-2 mb-5">
+                <button class="btn btn-outline-dark btn-sm px-4 fw-bold active-toggle" onclick="showTab('userTab')">Users</button>
+                <button class="btn btn-outline-dark btn-sm px-4 fw-bold" onclick="showTab('photoTab')">Photo</button>
+            </div>
+
+            <div id="userTab" class="upload-section">
+                <h3 class="fw-bold mb-4">Upload User</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="upload-box p-4 d-flex flex-column justify-content-between">
+                            <div class="user-list">
+                                <div class="dark-item-box d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="item-circle">
+                                            <i class="bi bi-person-fill"></i>
+                                        </div>
+                                        <span class="fw-bold">2024304880</span>
+                                    </div>
+                                    <button class="btn-delete-small"><i class="bi bi-trash"></i></button>
+                                </div>
+                            </div>
+                            <button class="btn btn-navy w-25 align-self-end">Upload</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="mb-3">
+                            <label class="fw-bold small mb-1">ID Number</label>
+                            <input type="text" class="form-control" placeholder="ID Number">
+                        </div>
+                        <div class="mb-4">
+                            <label class="fw-bold small mb-1">Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button class="btn btn-navy w-100 py-2 fw-bold">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="photoTab" class="upload-section d-none">
+                <h3 class="fw-bold mb-4">Upload Student Yearbook</h3>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="upload-box p-5 d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="upload-icon-circle mb-3">
+                                <i class="bi bi-cloud-arrow-up-fill fs-1"></i>
+                            </div>
+                            <h5 class="fw-bold">Select Photo to Upload</h5>
+                            <p class="text-secondary small">Supported Format: PNG, JPG (15mb each)</p>
+                            <button class="btn btn-navy mt-4 px-5">
+                                <i class="bi bi-upload me-2"></i> Upload
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Name</label>
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Department</label>
+                                <select class="form-select" id="deptSelect" onchange="updatePrograms()">
+                                    <option value="" selected>Select</option>
+                                    <option value="engineering">Engineering</option>
+                                    <option value="csis">Computer Science and Information Systems</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="ls">Life Sciences</option>
+                                    <option value="ns">Natural Sciences</option>
+                                    <option value="ss">Social Sciences</option>
+                                    <option value="ah">Art and Humaties</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Program</label>
+                                <select class="form-select" id="programSelect" onchange="updateSections()">
+                                    <option value="" selected>Select Department first</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Section</label>
+                                <select class="form-select" id="sectionSelect">
+                                    <option value="" selected>Select Program first</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Latin Honor</label>
+                                <select class="form-select">
+                                    <option selected>None</option>
+                                    <option value="summa">Summa Cum Laude</option>
+                                    <option value="magna">Magna Cum Laude</option>
+                                    <option value="cumlaude">Cum Laude</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small">Class Year</label>
+                                <input type="text" class="form-control" placeholder="Year">
+                            </div>
+                            <div class="col-12">
+                                <label class="fw-bold small">Quote</label>
+                                <textarea class="form-control" rows="4" placeholder="Enter text here..."></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-navy w-100 py-2">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.upload-section').forEach(s => s.classList.add('d-none'));
+            document.getElementById(tabId).classList.remove('d-none');
+            const buttons = document.querySelectorAll('.btn-outline-dark');
+            buttons.forEach(btn => btn.classList.remove('active-toggle'));
+            if (event) {
+                event.currentTarget.classList.add('active-toggle');
+            }
+        }
+
+        const programsData = {
+            engineering: ["BS Civil Engineering", "BS Electronic Engineering", "BS Electrical Engineering", "BS Environment Engineering", "BS Computer Engineering", "BS Agricultural and Biosystems Engineering", "BS Mechanical Engineering", "BS Naval Architecture and Marine Engineering", "BS Geodetic Engineering"],
+            csis: ["BS Computer Science", "BS Data Science", "BS Technology Communication Management", "BS Information Technology"],
+            technology: ["BS Agricultural Technology", "BS Autotronics", "BS Electro-Mechanical", "BS Electronics Technology", "BS Energy System and Management", "BS Food Processing and Management"],
+            ls: ["BS Agriculture", "BS Agroforestry", "BS Horticulture and Management", "BS Marine Biology"],
+            ns: ["BS Applied Mathematics", "BS Applied Physics", "BS Chemistry", "BS Environment Science"],
+            ss: ["BS Secondary Education", "BS Social Work", "BS Technical-Vocational Teacher", "BS Technology and Livelihood Education"],
+            ah: ["BS Architecture"]
+        };
+
+        const programAbbreviations = {
+            "BS Civil Engineering": "CE", "BS Electronic Engineering": "ECE", "BS Electrical Engineering": "EE",
+            "BS Environment Engineering": "EnE", "BS Computer Engineering": "CpE", "BS Agricultural and Biosystems Engineering": "ABE",
+            "BS Mechanical Engineering": "ME", "BS Naval Architecture and Marine Engineering": "NAME", "BS Geodetic Engineering": "GE",
+            "BS Computer Science": "CS", "BS Data Science": "DS", "BS Technology Communication Management": "TCM", "BS Information Technology": "IT",
+            "BS Agricultural Technology": "AgTech", "BS Autotronics": "Auto", "BS Electro-Mechanical": "ELM",
+            "BS Electronics Technology": "EST", "BS Energy System and Management": "ESM", "BS Food Processing and Management": "FPM",
+            "BS Agriculture": "Agri", "BS Agroforestry": "AF", "BS Horticulture and Management": "BSHM", "BS Marine Biology": "MarBio",
+            "BS Applied Mathematics": "AM", "BS Applied Physics": "AP", "BS Chemistry": "Chem", "BS Environment Science": "ES",
+            "BS Secondary Education": "BSED", "BS Social Work": "BSSW", "BS Technical-Vocational Teacher": "BTVTED",
+            "BS Technology and Livelihood Education": "BTLED", "BS Architecture": "Archi"
+        };
+
+        function updatePrograms() {
+            const deptSelect = document.getElementById("deptSelect");
+            const programSelect = document.getElementById("programSelect");
+            const sectionSelect = document.getElementById("sectionSelect");
+            const selectedDept = deptSelect.value;
+
+            programSelect.innerHTML = '<option value="" selected>Select Program</option>';
+            sectionSelect.innerHTML = '<option value="" selected>Select Program first</option>';
+
+            if (selectedDept && programsData[selectedDept]) {
+                programsData[selectedDept].forEach(prog => {
+                    let option = document.createElement("option");
+                    option.text = prog;
+                    option.value = prog;
+                    programSelect.add(option);
+                });
+            }
+        }
+
+        function updateSections() {
+            const programSelect = document.getElementById("programSelect");
+            const sectionSelect = document.getElementById("sectionSelect");
+            const selectedProgram = programSelect.value;
+
+            sectionSelect.innerHTML = '<option value="" selected>Select Section</option>';
+
+            if (selectedProgram && programAbbreviations[selectedProgram]) {
+                const abbr = programAbbreviations[selectedProgram];
+                for (let i = 1; i <= 9; i++) {
+                    let sectionName = `${abbr}-4R${i}`;
+                    let option = document.createElement("option");
+                    option.text = sectionName;
+                    option.value = sectionName;
+                    sectionSelect.add(option);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
